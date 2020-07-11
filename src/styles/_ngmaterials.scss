@@ -1,0 +1,48 @@
+@import 'variables';
+@import '~@angular/cdk/overlay-prebuilt.css';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.mat-progress-spinner circle,
+.mat-spinner circle {
+  stroke: $color-deep-purple;
+}
+
+.cdk-overlay-container .cdk-overlay-pane {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-white;
+  opacity: $background-opacity;
+}
+
+.mat-input-element {
+  caret-color: $color-grey-dark-18 !important;
+  color: $color-grey-dark-18 !important;
+}
+
+.mat-form-field-appearance-fill {
+  .mat-form-field-flex {
+    background-color: $color-white;
+  }
+  .mat-form-field-infix {
+    padding: 0;
+  }
+}
+
+.mat-form-field-underline {
+  width: 0% !important;
+}
+
+.mat-form-field-wrapper {
+  padding-bottom: 0 !important;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-suffix {
+  padding-bottom: 2px;
+  margin-left: 10px;
+
+  button {
+    background-color: $color-white;
+    border: hidden;
+  }
+}

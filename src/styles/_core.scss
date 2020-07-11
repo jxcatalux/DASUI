@@ -1,0 +1,60 @@
+@import 'variables';
+
+body {
+  color: $color-grey-dark-18;
+  font-weight: 300;
+  font-size: 14px;
+  font-family: $font-family;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  margin: 0;
+  .tooltip.show {
+    opacity: 1;
+  }
+}
+
+.form {
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.row {
+  margin: 0 auto;
+  max-width: 900px;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.inline-group {
+  display: flex;
+  align-items: baseline;
+  padding-bottom: 5px;
+  min-height: 75px;
+}
+
+fieldset {
+  border-radius: 10px !important;
+  border: 1px solid $color-grey-light !important;
+  padding: 0 30px;
+
+  legend {
+    width: auto;
+    padding-left: 10px;
+    padding-right: 20px;
+  }
+}
+
+.icon-error {
+  vertical-align: text-top;
+  border-style: none;
+  height: 11px;
+  padding-right: 4px;
+}
+
+.pointer-cursor {
+  cursor: pointer;
+}
+
+.modal {
+  top: 190px;
+}

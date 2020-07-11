@@ -25,3 +25,19 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## TSLinter
+
+Install `TSLint`; Add "editor.codeActionsOnSave": {"source.fixAll.tslint": true} to settings;
+
+## Prettier
+
+Install `Prettier`; Add "editor.defaultFormatter": "esbenp.prettier-vscode" and "editor.formatOnSave": true to settings;
+
+## StyleLinter -- StyleLint & StyleLint SCSS
+
+Install `StyleLint`; Add "stylelint.enable": true, "css.validate": false, "less.validate": false, "scss.validate": false to settings;
+
+## docker-compose
+docker-compose build --no-cache
+docker-compose up -d

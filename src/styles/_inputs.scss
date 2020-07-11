@@ -1,0 +1,37 @@
+@import 'mixins';
+@import 'variables';
+
+.input-wrapper {
+  display: flex;
+  border-width: 0 0 1px;
+  border-style: solid;
+}
+
+.input {
+  outline: 0;
+  border-style: none;
+  width: 200px;
+  @include form-field-wrapper;
+  color: $color-grey-dark-18;
+  height: 100%;
+}
+
+.input-lg {
+  @extend .input;
+  width: 250px;
+}
+
+.inline_wrapper_underline_focus {
+  border-width: 0 0 2px;
+  border-color: $color-black;
+}
+
+.inline_label_focus {
+  color: $color-black;
+  letter-spacing: 0.6px;
+  font-weight: 900;
+}
+
+.invalid-input {
+  border-color: $color-red;
+}

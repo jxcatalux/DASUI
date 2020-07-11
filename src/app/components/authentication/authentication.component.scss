@@ -1,0 +1,33 @@
+@import 'ngmaterials';
+@import 'variables';
+@import 'mixins';
+
+:host {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-label {
+  min-width: 80px;
+  width: 30%;
+}
+
+.input-label {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 5px;
+  font-weight: 400;
+}
+
+.failed-authentication-hidden {
+  color: $color-red;
+  min-height: 24px;
+  visibility: hidden;
+  text-align: right;
+  @include form-error-font-size;
+}
+
+.failed-authentication-shown {
+  visibility: visible;
+}

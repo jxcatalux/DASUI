@@ -1,0 +1,7 @@
+version: '3.7'
+services:
+  dasui:
+    build: .
+    image: dasui_dasui:latest
+    ports:
+      - '8888:80'

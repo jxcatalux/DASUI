@@ -1,0 +1,17 @@
+@import 'mixins';
+@import 'variables';
+
+.btnx {
+  background-color: $color-deep-blue;
+  border: none;
+  color: $color-white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  min-width: 76px;
+  font-size: 14px;
+  min-height: 38px;
+  border-radius: 10px;
+  @include button-focus;
+}

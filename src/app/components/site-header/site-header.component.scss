@@ -1,0 +1,45 @@
+@import 'variables';
+@import 'mixins';
+
+.site-header {
+  height: 70px;
+  background-color: $color-black;
+  color: $color-white;
+  font-size: 11px;
+}
+
+.site-logo {
+  height: 36px;
+  padding-right: 10px;
+}
+
+.das-logo {
+  height: 36px;
+  padding-right: 10px;
+}
+
+.logout-icon {
+  height: 15px;
+  width: 18px;
+  padding-right: 2px;
+}
+
+.modal-header {
+  padding: 5px;
+}
+
+.pr-80 {
+  padding-right: 80px;
+  padding-top: 5px;
+}
+
+::ng-deep .modal-dialog {
+  max-width: 400px;
+}
+
+.cross-button {
+  @include button-focus;
+  &:hover {
+    font-weight: 900;
+  }
+}

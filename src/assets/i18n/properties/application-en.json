@@ -1,0 +1,29 @@
+{
+  "common": {
+    "applicationName": "Debtor Administration System 1.0",
+    "clear": "Clear",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "error": {
+    "username": "Username is required!",
+    "password": "Password is required!"
+  },
+  "authentication": {
+    "username": "Username:",
+    "password": "Password:",
+    "login": "Login",
+    "logout": {
+      "button": "Logout",
+      "confirmation": "Do you really want to log out of the system?"
+    },
+    "welcomeUser": "Welcome {{user}}",
+    "failed": "Password is incorrect, please try agian",
+    "errorIconPath": "/assets/images/icon-inline-error.svg"
+  },
+  "siteHeader": {
+    "logoOntarioPath": "/assets/images/logo-ontario.png",
+    "logoDasPath": "/assets/images/logo-das.jpg",
+    "logoutIconPath": "/assets/images/logout.png"
+  }
+}

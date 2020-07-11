@@ -1,0 +1,15 @@
+@import 'variables';
+@import 'mixins';
+
+.err-msg-hidden {
+  padding-top: 4px;
+  color: $color-red;
+  @include form-error-font-size;
+  visibility: hidden;
+  display: block;
+  text-align: start;
+}
+
+.err-msg-shown {
+  visibility: visible;
+}

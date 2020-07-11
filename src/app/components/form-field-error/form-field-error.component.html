@@ -1,0 +1,14 @@
+<div
+  class="err-msg-hidden"
+  [ngClass]="{
+    'err-msg-shown': show
+  }"
+>
+  <img
+    role="presentation"
+    src="{{ 'authentication.errorIconPath' | translate }}"
+    class="icon-error"
+    alt=""
+  />
+  <span [translate]="message"></span>
+</div>

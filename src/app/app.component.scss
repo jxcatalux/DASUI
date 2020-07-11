@@ -1,0 +1,23 @@
+@import 'variables';
+
+.app {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.bg-black {
+  background-color: $color-black;
+}
+
+/* Footer Placeholder
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+  background-color: $color-black;
+  width: 100%;
+}
+*/

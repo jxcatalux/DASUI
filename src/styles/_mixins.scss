@@ -1,0 +1,19 @@
+@import 'variables';
+
+@mixin form-field-wrapper {
+  padding: 12px 12px 0;
+}
+
+@mixin form-error-font-size {
+  font-size: 12px;
+}
+
+@mixin button-focus {
+  &:focus {
+    outline: 0 solid transparent;
+  }
+
+  &:hover {
+    color: $color_black;
+  }
+}

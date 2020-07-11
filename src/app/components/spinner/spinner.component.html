@@ -1,0 +1,12 @@
+<div [ngClass]="{ 'spinner-wrapper': isGlobal }">
+  <!--
+  <mat-spinner [diameter]="isGlobal ? 100 : 70"></mat-spinner>
+  -->
+  <div
+    class="spinner-border spinner"
+    role="status"
+    [ngClass]="isGlobal ? 'big-spinner-border' : 'medium-spinner-border'"
+  >
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>

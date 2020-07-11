@@ -1,0 +1,121 @@
+<div class="pt-5">
+  <form
+    autocomplete="off"
+    class="form msse-form"
+    novalidate
+    [formGroup]="authenticationForm"
+  >
+    <fieldset clss="form-fieldset">
+      <legend translate="authentication.login"></legend>
+
+      <div
+        class="failed-authentication-hidden"
+        [ngClass]="{
+          'failed-authentication-shown': failedAuthentication
+        }"
+      >
+        <img
+          role="presentation"
+          src="{{ 'authentication.errorIconPath' | translate }}"
+          class="icon-error"
+          alt=""
+        />
+        <span [translate]="'authentication.failed'"></span>
+      </div>
+
+      <div class="d-flex flex-column">
+        <div class="inline-group flex-column flex-md-row">
+          <div class="form-label">
+            <label
+              id="username-label"
+              class="input-label"
+              [translate]="'authentication.username'"
+            ></label>
+          </div>
+          <div>
+            <div
+              class="input-wrapper"
+              [ngClass]="{
+                'invalid-input': isInvalidateFormControl(formControls.username)
+              }"
+            >
+              <div>
+                <input
+                  id="username-input"
+                  formControlName="username"
+                  class="input-lg"
+                  appPropagateFocus
+                  aria-labelledby="username-label"
+                  [attr.aria-invalid]="formControls.username.invalid"
+                />
+              </div>
+            </div>
+            <app-form-field-error
+              [show]="isInvalidateFormControl(formControls.username)"
+              [message]="'error.username'"
+            ></app-form-field-error>
+          </div>
+        </div>
+
+        <div class="inline-group flex-column flex-md-row">
+          <div class="form-label">
+            <label
+              id="password-label"
+              class="input-label"
+              [translate]="'authentication.password'"
+            ></label>
+          </div>
+          <div>
+            <div
+              class="input-wrapper"
+              [ngClass]="{
+                'invalid-input': isInvalidateFormControl(formControls.password)
+              }"
+            >
+              <mat-form-field appearance="fill">
+                <input
+                  id="password-input"
+                  matInput
+                  appPropagateFocus
+                  class="input"
+                  formControlName="password"
+                  [type]="hide ? 'password' : 'text'"
+                />
+                <button
+                  id="hide-button"
+                  mat-icon-button
+                  matSuffix
+                  (click)="hide = !hide"
+                  [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="hide"
+                >
+                  <mat-icon>{{
+                    hide ? 'visibility_off' : 'visibility'
+                  }}</mat-icon>
+                </button>
+              </mat-form-field>
+            </div>
+            <app-form-field-error
+              [show]="isInvalidateFormControl(formControls.password)"
+              [message]="'error.password'"
+            ></app-form-field-error>
+          </div>
+        </div>
+        <div class="inline-group justify-content-end pt-3">
+          <button
+            type="button"
+            class="btnx"
+            translate="authentication.login"
+            (click)="onSubmit()"
+          ></button>
+          <button
+            type="button"
+            class="btnx ml-5"
+            translate="common.clear"
+            (click)="resetForm()"
+          ></button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</div>

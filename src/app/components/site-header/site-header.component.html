@@ -1,0 +1,72 @@
+<div class="row site-header d-flex align-items-center">
+  <div class="d-flex justify-content-between align-items-center w-100">
+    <div>
+      <img
+        class="site-logo"
+        src="{{ 'siteHeader.logoOntarioPath' | translate }}"
+      />
+    </div>
+    <div class="d-flex align-items-end">
+      <div class="d-none d-sm-block pr-3">
+        <ng-container *ngTemplateOutlet="welcomeTemplate"></ng-container>
+      </div>
+      <div>
+        <img
+          class="das-logo"
+          src="{{ 'siteHeader.logoDasPath' | translate }}"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="d-sm-none w-100 pr-2">
+    <ng-container *ngTemplateOutlet="welcomeTemplate"></ng-container>
+  </div>
+</div>
+
+<ng-template #welcomeTemplate>
+  <div class="d-flex justify-content-end" *ngIf="sessionUser">
+    <span
+      class="pr-2"
+      [translate]="'authentication.welcomeUser'"
+      [translateParams]="{ user: sessionUser.fullName }"
+    ></span>
+    <div class="pointer-cursor" (click)="openLogout(logoutTemplate)">
+      <img
+        class="logout-icon"
+        src="{{ 'siteHeader.logoutIconPath' | translate }}"
+      />
+      <span translate="authentication.logout.button"></span>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #logoutTemplate>
+  <div class="modal-header">
+    <button
+      type="button"
+      class="close pull-right cross-button"
+      aria-label="Close"
+      (click)="logoutDecline()"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p [translate]="'authentication.logout.confirmation'"></p>
+    <div class="d-flex justify-content-between pr-80">
+      <button
+        type="button"
+        class="btnx"
+        (click)="logoutConfirm()"
+        [translate]="'common.yes'"
+      ></button>
+      <button
+        type="button"
+        class="btnx"
+        (click)="logoutDecline()"
+        [translate]="'common.no'"
+      ></button>
+    </div>
+  </div>
+</ng-template>
