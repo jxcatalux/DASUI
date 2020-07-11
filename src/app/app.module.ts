@@ -27,6 +27,11 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 const appInitializerFn = (envConfig: ConfigService) => () =>
   envConfig.loadAppConfig();
+/*
+  export function initConfig(appConfig: AppConfigService) {
+    return () => appConfig.loadConfig();
+  }
+*/
 
 @NgModule({
   declarations: [
